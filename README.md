@@ -22,37 +22,40 @@ A full-stack financial trading and investment platform clone inspired by Zerodha
 
 ---
 
-## 📂 Project Structure
-
-```text
-Zerodha/
-├── backend/      # Node.js & Express server with MongoDB integration
-├── dashboard/    # React application for the inner trading platform
-└── frontend/     # React application for the main marketing landing page
-
-
-🔥 Setup & InstallationFollow these steps to get the project running locally on your machine.PrerequisitesMake sure you have Node.js and npm (or yarn) installed.Step 1: Clone the RepositoryBashgit clone [https://github.com/itsReek/Zerodha.git](https://github.com/itsReek/Zerodha.git)
-cd Zerodha
-Step 2: Backend SetupNavigate to the backend directory:Bash   cd backend
-Install the server dependencies:Bash   npm install
-Create a .env file in the root of the backend folder and add your MongoDB Connection URI:Code snippet   MONGO_URL=your_mongodb_connection_string
-   PORT=3005
-Start the backend server:Bash   node index.js
-   # Or if you have nodemon installed: npm run dev / nodemon index.js
-Step 3: Frontend Setup (Main Website)Open a new terminal window and navigate to the frontend directory:Bash   cd frontend
-Install dependencies:Bash   npm install
-Start the application:Bash   npm start
-Step 4: Dashboard Setup (Trading Portal)Open a third terminal window and navigate to the dashboard directory:Bash   cd dashboard
-Install dependencies:Bash   npm install
-Start the dashboard platform:Bash   npm start
-📝 API Reference (Backend)MethodEndpointDescriptionGET/allHoldingsFetch all long-term stock holdingsGET/allPositionsFetch active intra-day trading positionsPOST/newOrderPlace a new buy/sell market order🏆 LicenseThis project is licensed under the MIT License.
----
-
-### 💡 Quick Tip for the Profile Page "About" Box:
-While you are creating the README, you can also paste this quick 1-liner into your GitHub **About** description box so it matches your other repositories:
-
-> *A full-stack Zerodha clone featuring a marketing landing page and an interactive trading.
-
+📂 Project Structure
+└── Zerodha/
+    ├── backend/                    # Node.js & Express Server
+    │   ├── config/                 # Database connection configurations
+    │   │   └── db.js
+    │   ├── controllers/            # Logic for handling API endpoints
+    │   │   ├── holdingsController.js
+    │   │   ├── positionsController.js
+    │   │   └── ordersController.js
+    │   ├── models/                 # MongoDB Mongoose Schemas
+    │   │   ├── HoldingsModel.js
+    │   │   ├── PositionsModel.js
+    │   │   └── OrdersModel.js
+    │   ├── .env                    # Environment variables (Ignored by git)
+    │   ├── index.js                # Server entry point
+    │   └── package.json            # Backend dependencies
+    │
+    ├── frontend/                   # Main Marketing & Landing Site (React)
+    │   ├── public/                 # Static assets (images, logos, favicon)
+    │   └── src/
+    │       ├── components/         # Reusable UI parts (Navbar, Footer)
+    │       ├── pages/              # Main route views (Home, Signup, Pricing, Support)
+    │       ├── App.js              # Application routing configuration
+    │       └── index.js            # Frontend entry point
+    │
+    └── dashboard/                  # Interactive Trading Portal (React)
+        ├── public/                 # Dashboard static assets
+        └── src/
+            ├── components/         # Trading UI elements (Watchlist, Summary, Menu)
+            │   ├── WatchList.js
+            │   ├── Holdings.js
+            │   └── Positions.js
+            ├── App.js              # Dashboard layout and navigation
+            └── index.js            # Dashboard entry point
 
 
 
