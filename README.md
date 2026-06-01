@@ -22,42 +22,60 @@ A full-stack financial trading and investment platform clone inspired by Zerodha
 
 ---
 
-📂 Project Structure
-└── Zerodha/
-    ├── backend/                    # Node.js & Express Server
-    │   ├── config/                 # Database connection configurations
-    │   │   └── db.js
-    │   ├── controllers/            # Logic for handling API endpoints
-    │   │   ├── holdingsController.js
-    │   │   ├── positionsController.js
-    │   │   └── ordersController.js
-    │   ├── models/                 # MongoDB Mongoose Schemas
-    │   │   ├── HoldingsModel.js
-    │   │   ├── PositionsModel.js
-    │   │   └── OrdersModel.js
-    │   ├── .env                    # Environment variables (Ignored by git)
-    │   ├── index.js                # Server entry point
-    │   └── package.json            # Backend dependencies
-    │
-    ├── frontend/                   # Main Marketing & Landing Site (React)
-    │   ├── public/                 # Static assets (images, logos, favicon)
-    │   └── src/
-    │       ├── components/         # Reusable UI parts (Navbar, Footer)
-    │       ├── pages/              # Main route views (Home, Signup, Pricing, Support)
-    │       ├── App.js              # Application routing configuration
-    │       └── index.js            # Frontend entry point
-    │
-    └── dashboard/                  # Interactive Trading Portal (React)
-        ├── public/                 # Dashboard static assets
-        └── src/
-            ├── components/         # Trading UI elements (Watchlist, Summary, Menu)
-            │   ├── WatchList.js
-            │   ├── Holdings.js
-            │   └── Positions.js
-            ├── App.js              # Dashboard layout and navigation
-            └── index.js            # Dashboard entry point
 
+## 📂 Project Structure
 
+```bash
+Zerodha/
+│
+├── backend/                         # Node.js & Express Backend
+│   ├── config/
+│   │   └── db.js                    # MongoDB connection
+│   │
+│   ├── controllers/                # API business logic
+│   │   ├── holdingsController.js
+│   │   ├── positionsController.js
+│   │   └── ordersController.js
+│   │
+│   ├── models/                     # MongoDB Schemas
+│   │   ├── HoldingsModel.js
+│   │   ├── PositionsModel.js
+│   │   └── OrdersModel.js
+│   │
+│   ├── .env                        # Environment variables
+│   ├── index.js                    # Server entry point
+│   └── package.json
+│
+├── frontend/                       # Landing Website
+│   ├── public/
+│   │
+│   └── src/
+│       ├── components/             # Shared UI Components
+│       ├── pages/                  # Home, Pricing, Signup, Support
+│       ├── App.js                  # Routing configuration
+│       └── index.js
+│
+├── dashboard/                      # Trading Dashboard
+│   ├── public/
+│   │
+│   └── src/
+│       ├── components/
+│       │   ├── WatchList.js
+│       │   ├── Holdings.js
+│       │   ├── Positions.js
+│       │   └── Summary.js
+│       │
+│       ├── App.js                  # Dashboard Layout
+│       └── index.js
+│
+└── README.md
+```
 
+### 🏗️ Architecture Overview
+
+* **Backend:** REST APIs built using Node.js, Express.js, and MongoDB.
+* **Frontend:** Marketing website for product information, onboarding, and support.
+* **Dashboard:** Separate React application providing trading, portfolio tracking, holdings, and position management functionalities.
+* **Database:** MongoDB used for storing user portfolio, holdings, orders, and positions.
 
 
